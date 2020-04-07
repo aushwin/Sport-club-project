@@ -7,10 +7,9 @@
 
     <script>
         function validateForm() {
-            alert("called");
           var x = document.getElementById("email").value;
           if (x == "" || !x.includes("@")) {
-            alert("Name must be filled out");
+            alert("Fields must be filled out");
             document.getElementById("erroremail").innerHTML = "Email is invalid";
             return false;
           }
@@ -94,11 +93,10 @@
 <div class="Join">
     <h1>Provide Your details !</h1>
   <div class="textbox">
-    <form>
-     <p> Email :<input class="textbox error" type="email"  id="erroremail" required ></p>
-     <p> Name:<input class="textbox error" type="text" required  id="errorname"></p>
-      <p><input class="button" type="submit" value="Submit" onclick="validateForm()"> </p>
-      <p><input class="button"  type="reset" value="Reset" onclick="validateForm()">   </p>
+    <form class="forms">
+      Email : &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<input id="email" class="nani" type="text" required> <br><p class="error" id="erroremail"></p><br>                     
+      Name:&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <input id="name" class="nani" type="text" required> <br><p class="error" id="errorname"></p><br>
+      <input class="button" type="button" value="Submit" onclick="validateForm()"> <br><br>
     </form>
   </div>
   <div class="follow">
